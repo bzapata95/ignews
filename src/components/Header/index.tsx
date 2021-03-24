@@ -1,6 +1,10 @@
+import {memo} from 'react';
+
+import SignInButton from "../SignInButton";
+
 import styles from './styles.module.scss';
 
-export default function Header() {
+function Header() {
   return (
     <header className={styles.headerContainer}>
       <div className={styles.headerContent}>
@@ -10,8 +14,12 @@ export default function Header() {
           <a className={styles.active}>Home</a>
           <a>Posts</a>
         </nav>
+
+        <SignInButton />
       </div>
     </header>
   );
 };
 
+
+export default memo(Header);
